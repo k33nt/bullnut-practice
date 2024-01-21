@@ -7,9 +7,9 @@ body {
   
   main {
     margin:  0.5rem auto;
-    padding: 1rem 0;
+    padding: 2rem 0;
     width: 90%;
-    max-width: 10rem}
+    max-width: 15rem}
   
   form {
     box-sizing: border-box;
@@ -95,6 +95,11 @@ input[type="checkbox"] {
 
 }
 
-
 input[type="checkbox"]:checked {
   background: url('images/checkbox.svg') no-repeat center / 80% auto;}
+  label[class="terms"]{
+display: inline;
+  }
+  h2{
+    color: blue;
+  }
