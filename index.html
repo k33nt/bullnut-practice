@@ -1,56 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bullnuttechnologies</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2980b9;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .hero-section {
+            background-image: url('images/PIC.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 0.8em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #2ecc71;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 30%;
+            background-color: #ecf0f1;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .testimonial-section {
+            background-color: #ecf0f1;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .cta-section {
+            background-color: #3498db;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .cta-button-big {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            background-color: #2ecc71;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #2980b9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
-
 <body>
+    <header>
+        <h1>Bullnut technologies</h1>
+    </header>
+
+    <nav>
+        <a href="#hero-section">Home</a>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="register.html">Get Started</a>
+        <a href="login.html">Log in</a>
+    </nav>
+
     <main>
+        <section id="hero-section" class="hero-section">
+            <h1>Welcome to Bullnuttechnologies</h1>
+            <p>Unlock the power of our amazing product and experience a new level of innovation.
+                Your security is our concern
+            </p>
+            <a href="register.html" class="cta-button">Get Started</a>
+        </section>
 
-    <h2>Register || Bullnuttechnologies</h2>
-   
-        <form method="post">
-          <div>
-            <label for = 'username'>User Name</label> 
-            <input type ="text" id="username" name="username" placeholder="*Create a UserName">
-            </div> 
-           <div> 
-            <label for = 'phone no'>Phone no.</label> 
-            <input type ="text" id="phone no" name="phone no" placeholder="*Enter your phone no.">
-        </div> 
-        <div> 
-            <label for = 'Email'>Email</label> 
-            <input type ="email" id="Email" name="Email" placeholder="*Enter Your Email">
-        </div> 
-        <div> 
-            <label for = 'Create password'>Create Password</label> 
-            <input type ="text" id="Create Password" name="Create Password" placeholder="*Create Password">
-
-        </div> 
-        <div> 
-            <label for = 'Confirm Password'>Confirm Password</label> 
-            <input type ="text" id="Confirm Password" name="Confirm Password" placeholder="*Confirm Password">
-        </div>
-        <div>
-            <input type="checkbox"/>
-  <label for="Accept Terms and Conditions">Accept Terms and Conditions</label>
-        </div>
-                <button name="sign up">sign up</button>
+        <section id="features" class="features">
+            <div class="feature">
+                <h3>CCTVS</h3>
+                <p>"Transform your surveillance strategy with our advanced online CCTV systems, designed to redefine security and provide unparalleled peace of mind. Our cutting-edge cameras deliver high-resolution footage, ensuring every detail is captured with clarity. With remote access capabilities, you can monitor your property in real-time from any location, giving you constant oversight and control. Our user-friendly interface and intelligent features make managing and reviewing footage a breeze. Whether you're safeguarding your home or business, our online CCTV systems offer a robust solution that seamlessly integrates technology, reliability, and convenience. Elevate your security posture and gain complete confidence in your property's safety with our comprehensive CCTV solutions."</p>
             </div>
+            <div class="feature">
+                <h3>Alarm systems</h3>
+                <p>"Secure your peace of mind with our cutting-edge online alarm system. Our advanced technology ensures your home or business is safeguarded 24/7, providing you with unparalleled protection and confidence. With instant mobile alerts, you can stay connected to your property from anywhere, giving you the power to respond promptly to any potential threat. Easy installation, customizable features, and a user-friendly interface make our alarm system the ideal choice for those who prioritize safety without compromising convenience. Don't leave your security to chance – invest in our online alarm system today and experience a new level of assurance and control for the safety of what matters most to you."</p>
+            </div>
+            <div class="feature">
+                <h3>GATE AUTOMATION</h3>
+                <p>
+                    "Elevate your property's security and convenience with our state-of-the-art automated gate system. Our online-controlled gates seamlessly blend cutting-edge technology with elegant design, offering you a sophisticated solution for controlling access to your home or business. Enjoy the peace of mind that comes with knowing your property is protected by a robust and reliable system, accessible at your fingertips from anywhere in the world. With features like remote access, user-friendly interfaces, and customizable settings, our automated gates provide a seamless balance between security and convenience. Upgrade your property's entrance with our automated gate system – the epitome of smart security, enhancing both aesthetics and protection for your valuable assets."
+                    
+                    
+                    
+                    
+                    
+                    </p>
+            </div>
+        </section>
 
+        <section id="testimonials" class="testimonial-section">
+            <div class="testimonial">
+                <p>"Your product changed my life. I can't imagine my day without it!"</p>
+                <p>- Happy Customer</p>
+            </div>
+        </section>
 
-        </form>
-        </div>
-    
-    
-    
-        
-</main>
-    
+        <section id="cta-section" class="cta-section">
+            <h2>Ready to get started?</h2>
+            <a href="register.html" class="cta-button-big">Sign Up Now</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bullnuttechnologies. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
