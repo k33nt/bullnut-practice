@@ -1,29 +1,41 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
+document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector("form");
 
-    if (form) {
-        form.addEventListener('submit', function (event) {
-            if (!validateForm()) {
-                event.preventDefault();
-            }
-        });
-    }
+    form.addEventListener("submit", function (event) {
+        if (!validateForm()) {
+            event.preventDefault();
+        }
+    });
 
     function validateForm() {
-        const username = document.getElementById('username').value;
-        const phoneNo = document.getElementById('phone_no').value;
-        const email = document.getElementById('Email').value;
-        const password = document.getElementById('Create_Password').value;
-        const confirmPassword = document.getElementById('Confirm_Password').value;
-        const acceptTerms = document.getElementById('accept_terms').value;
-       const inputPassword = document.getElementById('Enter_Password').value;
-
-        if (!username || !phoneNo || !email || !password || !confirmPassword || !acceptTerms.checked || !inputPassword) {
-            alert('Please fill in all required fields and accept the terms and conditions.');
+        function isEmpty(value, fieldName) {
+            if (value.trim() === "") {
+                alert("Please fill in the required field: " + fieldName);
+                return true;
+            }
             return false;
         }
+
+        var username = document.getElementById("username").value;
+        var phoneNo = document.getElementById("phone_no").value;
+        var email = document.getElementById("Email").value;
+        var password = document.getElementById("Create_Password").value;
+        var confirmPassword = document.getElementById("Confirm_Password").value;
+        var termsCheckbox = document.querySelector(".arrow-togglable");
+
+        if (
+            isEmpty(username, "User Name") ||
+            isEmpty(phoneNo, "Phone no.") ||
+            isEmpty(email, "Email") ||
+            isEmpty(password, "Create Password") ||
+            isEmpty(confirmPassword, "Confirm Password")
+        ) {
+            return false;
+        }
+
     }
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const createPasswordInput = document.getElementById('Create_Password');
@@ -112,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const type = passwordInput.type === 'password' ? 'text' : 'password';
         passwordInput.type = type;
 
-        // Update the eye icon to reflect the current state
+        
         eyeIcon.classList.toggle('visible', type === 'text');
     }
 });
@@ -145,7 +157,133 @@ document.addEventListener('DOMContentLoaded', function () {
         const type = passwordInput.type === 'password' ? 'text' : 'password';
         passwordInput.type = type;
 
-        // Update the eye icon to reflect the current state
+        
         eyeIcon.classList.toggle('visible', type === 'text');
+    }
+});
+
+
+    function validateForm() {
+        var username = usernameInput.value;
+        var password = passwordInput.value;
+
+        if (username.trim() === "") {
+            alert("Please enter your username.");
+            return false;
+        }
+        if (password.trim() === "") {
+            alert("Please enter your password.");
+            return false;
+        }
+        return true;
+    }
+;
+document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector("form");
+    var emailInput = document.getElementById("Email");
+    var confirmEmailInput = document.getElementById("confirm_Email");
+
+    form.addEventListener("submit", function (event) {
+        if (!validateForm()) {
+            event.preventDefault();
+        }
+    });
+
+    emailInput.addEventListener("input", function () {
+        validateEmail();
+    });
+
+    confirmEmailInput.addEventListener("input", function () {
+        validateEmail();
+    });
+
+    function validateForm() {
+        var email = emailInput.value.trim();
+        var confirmEmail = confirmEmailInput.value.trim();
+
+        
+        if (email === "") {
+            alert("Please enter your email.");
+            return false;
+        }
+
+        
+        if (confirmEmail === "") {
+            alert("Please confirm your email.");
+            return false;
+        }
+
+        
+        if (email !== confirmEmail) {
+            alert("Email and Confirm Email do not match.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function validateEmail() {
+        var email = emailInput.value.trim();
+        var confirmEmail = confirmEmailInput.value.trim();
+        if (email !== confirmEmail) {
+            confirmEmailInput.setCustomValidity("Email and Confirm Email do not match.");
+        } else {
+            confirmEmailInput.setCustomValidity("");
+        }
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector("form");
+    var newPasswordInput = document.getElementById("newPassword");
+    var confirmNewPasswordInput = document.getElementById("confirmNewPasword");
+
+    form.addEventListener("submit", function (event) {
+        if (!validateForm()) {
+            event.preventDefault();
+        }
+    });
+
+    newPasswordInput.addEventListener("input", function () {
+        validatePasswords();
+    });
+
+    confirmNewPasswordInput.addEventListener("input", function () {
+        validatePasswords();
+    });
+
+    function validateForm() {
+        var newPassword = newPasswordInput.value.trim();
+        var confirmNewPassword = confirmNewPasswordInput.value.trim();
+
+    
+        if (newPassword === "") {
+            alert("Please enter your new password.");
+            return false;
+        }
+
+        if (confirmNewPassword === "") {
+            alert("Please confirm your new password.");
+            return false;
+        }
+
+        
+        if (newPassword !== confirmNewPassword) {
+            alert("New Password and Confirm New Password do not match.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function validatePasswords() {
+        var newPassword = newPasswordInput.value.trim();
+        var confirmNewPassword = confirmNewPasswordInput.value.trim();
+
+        
+        if (newPassword !== confirmNewPassword) {
+            confirmNewPasswordInput.setCustomValidity("New Password and Confirm New Password do not match.");
+        } else {
+            confirmNewPasswordInput.setCustomValidity("");
+        }
     }
 });
